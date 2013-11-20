@@ -113,7 +113,8 @@
     // Create views
     //
     self.containerView = ({
-        REMenuContainerView *view = [[REMenuContainerView alloc] init];
+        REMenuContainerView *view = [[REMenuContainerView alloc]
+                                     initWithHeight:self.itemHeight*[self.items count]];
         view.clipsToBounds = YES;
         view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         

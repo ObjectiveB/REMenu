@@ -74,6 +74,73 @@
                                                              [weakSelf setViewControllers:@[controller] animated:NO];
                                                          }];
     
+    REMenuItem *profileItem1 = [[REMenuItem alloc] initWithTitle:@"Profile1"
+                                                          image:[UIImage imageNamed:@"Icon_Profile"]
+                                               highlightedImage:nil
+                                                         action:^(REMenuItem *item) {
+                                                             NSLog(@"Item: %@", item);
+                                                             ProfileViewController *controller = [[ProfileViewController alloc] init];
+                                                             [weakSelf setViewControllers:@[controller] animated:NO];
+                                                         }];
+
+    
+    REMenuItem *profileItem2 = [[REMenuItem alloc] initWithTitle:@"Profile2"
+                                                          image:[UIImage imageNamed:@"Icon_Profile"]
+                                               highlightedImage:nil
+                                                         action:^(REMenuItem *item) {
+                                                             NSLog(@"Item: %@", item);
+                                                             ProfileViewController *controller = [[ProfileViewController alloc] init];
+                                                             [weakSelf setViewControllers:@[controller] animated:NO];
+                                                         }];
+
+    
+    REMenuItem *profileItem3 = [[REMenuItem alloc] initWithTitle:@"Profile3"
+                                                          image:[UIImage imageNamed:@"Icon_Profile"]
+                                               highlightedImage:nil
+                                                         action:^(REMenuItem *item) {
+                                                             NSLog(@"Item: %@", item);
+                                                             ProfileViewController *controller = [[ProfileViewController alloc] init];
+                                                             [weakSelf setViewControllers:@[controller] animated:NO];
+                                                         }];
+
+    REMenuItem *profileItem4 = [[REMenuItem alloc] initWithTitle:@"Profile4"
+                                                          image:[UIImage imageNamed:@"Icon_Profile"]
+                                               highlightedImage:nil
+                                                         action:^(REMenuItem *item) {
+                                                             NSLog(@"Item: %@", item);
+                                                             ProfileViewController *controller = [[ProfileViewController alloc] init];
+                                                             [weakSelf setViewControllers:@[controller] animated:NO];
+                                                         }];
+    
+    REMenuItem *profileItem5 = [[REMenuItem alloc] initWithTitle:@"Profile5"
+                                                          image:[UIImage imageNamed:@"Icon_Profile"]
+                                               highlightedImage:nil
+                                                         action:^(REMenuItem *item) {
+                                                             NSLog(@"Item: %@", item);
+                                                             ProfileViewController *controller = [[ProfileViewController alloc] init];
+                                                             [weakSelf setViewControllers:@[controller] animated:NO];
+                                                         }];
+
+
+    REMenuItem *profileItem6 = [[REMenuItem alloc] initWithTitle:@"Profile6"
+                                                          image:[UIImage imageNamed:@"Icon_Profile"]
+                                               highlightedImage:nil
+                                                         action:^(REMenuItem *item) {
+                                                             NSLog(@"Item: %@", item);
+                                                             ProfileViewController *controller = [[ProfileViewController alloc] init];
+                                                             [weakSelf setViewControllers:@[controller] animated:NO];
+                                                         }];
+
+    
+    REMenuItem *profileItem7 = [[REMenuItem alloc] initWithTitle:@"Profile7"
+                                                          image:[UIImage imageNamed:@"Icon_Profile"]
+                                               highlightedImage:nil
+                                                         action:^(REMenuItem *item) {
+                                                             NSLog(@"Item: %@", item);
+                                                             ProfileViewController *controller = [[ProfileViewController alloc] init];
+                                                             [weakSelf setViewControllers:@[controller] animated:NO];
+                                                         }];
+
     // You can also assign a custom view for any particular item
     // Uncomment the code below and add `customViewItem` to `initWithItems` array, for example:
     // self.menu = [[REMenu alloc] initWithItems:@[homeItem, exploreItem, activityItem, profileItem, customViewItem]]
@@ -92,7 +159,7 @@
     activityItem.tag = 2;
     profileItem.tag = 3;
     
-    self.menu = [[REMenu alloc] initWithItems:@[homeItem, exploreItem, activityItem, profileItem]];
+    self.menu = [[REMenu alloc] initWithItems:@[homeItem, exploreItem, activityItem, profileItem,profileItem1,profileItem2,profileItem3,profileItem4,profileItem5,profileItem6,profileItem7]];
     
     // Background view
     //
@@ -113,9 +180,9 @@
     
     // Blurred background in iOS 7
     //
-    //self.menu.liveBlur = YES;
-    //self.menu.liveBlurBackgroundStyle = REMenuLiveBackgroundStyleDark;
-    //self.menu.liveBlurTintColor = [UIColor redColor];
+    self.menu.liveBlur = YES;
+    self.menu.liveBlurBackgroundStyle = REMenuLiveBackgroundStyleDark;
+    self.menu.liveBlurTintColor = [UIColor blackColor];
     
     self.menu.imageOffset = CGSizeMake(5, -1);
     self.menu.waitUntilAnimationIsComplete = NO;
